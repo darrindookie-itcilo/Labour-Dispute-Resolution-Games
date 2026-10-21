@@ -1,0 +1,6 @@
+import { env } from 'cloudflare:workers';
+import { handle } from '../../../lib/api';
+export const dynamic='force-dynamic';
+export const GET=(req:Request)=>handle(req,env);
+export const POST=(req:Request)=>handle(req,env);
+export const OPTIONS=(req:Request)=>handle(req,env);

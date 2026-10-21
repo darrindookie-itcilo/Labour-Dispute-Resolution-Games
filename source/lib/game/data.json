@@ -1,0 +1,1109 @@
+{
+  "PRINCIPLES": [
+    {
+      "id": "efficiency",
+      "n": 1,
+      "name": "Efficiency",
+      "def": "The institution resolves disputes while minimizing resource use and maximizing net benefit, tempered by the complexity of the case."
+    },
+    {
+      "id": "speediness",
+      "n": 2,
+      "name": "Speediness",
+      "def": "Dispute resolution without undue delay, through swift, streamlined and unbureaucratic procedures."
+    },
+    {
+      "id": "accountability",
+      "n": 3,
+      "name": "Accountability",
+      "def": "The institution promotes transparency and has mechanisms making it, and its practitioners, answerable to society for performance."
+    },
+    {
+      "id": "accessibility",
+      "n": 4,
+      "name": "Accessibility",
+      "def": "The institution takes measures to reduce or remove barriers to resolving disputes — including factors that quietly put users off."
+    },
+    {
+      "id": "independence",
+      "n": 5,
+      "name": "Independence",
+      "def": "The institution performs its functions by reference to the law and merit, without inappropriate external influence."
+    },
+    {
+      "id": "impartiality",
+      "n": 6,
+      "name": "Impartiality",
+      "def": "The institution guards against actual or perceived bias, including through a culture of declaring and managing conflicts of interest."
+    },
+    {
+      "id": "fairness",
+      "n": 7,
+      "name": "Fairness",
+      "def": "Outcomes are not only fair but are reached, and seen to be reached, in a fair way."
+    },
+    {
+      "id": "equality",
+      "n": 8,
+      "name": "Equality",
+      "def": "The institution provides for equality by facilitating fair and equitable redress for disputes."
+    },
+    {
+      "id": "professionalism",
+      "n": 9,
+      "name": "Professionalism",
+      "def": "The institution has specialized expertise, recruits on merit, trains its people, and holds them to published standards of conduct."
+    },
+    {
+      "id": "enforcement",
+      "n": 10,
+      "name": "Enforcement",
+      "def": "The institution has mechanisms to ensure effective compliance with the final resolution."
+    },
+    {
+      "id": "voluntarism",
+      "n": 11,
+      "name": "Voluntarism",
+      "def": "Parties have a free choice of method and retain control over the process and its outcome. Not absolute: law or a collective agreement may prescribe."
+    },
+    {
+      "id": "confidentiality",
+      "n": 12,
+      "name": "Confidentiality",
+      "def": "Nothing produced in the dispute resolution process is disclosed to non-participants, subject to specified exceptions."
+    },
+    {
+      "id": "prevention",
+      "n": 13,
+      "name": "Prevention",
+      "def": "An effective institution assists in preventing disputes, not only in resolving them once they have erupted."
+    }
+  ],
+  "SYMPTOMS": [
+    {
+      "ref": "A-11",
+      "text": "The only office that accepts filings is 400 kilometres away, and it opens 09:00 to 15:00 on weekdays.",
+      "answer": [
+        "accessibility"
+      ],
+      "why": "Opening hours that require a day off, and a journey most claimants cannot afford, are exactly the barriers the tool means by factors that “obstruct or disincentivize use”."
+    },
+    {
+      "ref": "A-27",
+      "text": "The hearing is adjourned because nobody can find the case file. It is the second time this year.",
+      "answer": [
+        "efficiency"
+      ],
+      "why": "Case management and accurate, retrievable records sit under efficiency. Every lost file is a wasted hearing day paid for by both parties."
+    },
+    {
+      "ref": "B-03",
+      "text": "The law sets a 30-day limit for conciliation. Last year the average was eleven months. Nobody reports that figure.",
+      "answer": [
+        "speediness"
+      ],
+      "why": "Speediness is measured by whether statutory deadlines are met and whether delay is monitored at all. Unmeasured delay is nobody’s problem."
+    },
+    {
+      "ref": "B-14",
+      "text": "You ask how many cases the institution closed last year. Nobody can tell you, and nothing is published.",
+      "answer": [
+        "accountability"
+      ],
+      "why": "Public performance reporting is the cheapest accountability measure there is, and its absence is the easiest finding to act on."
+    },
+    {
+      "ref": "C-02",
+      "text": "The institution’s budget was cut by 40 per cent the year after it ruled against a state-owned enterprise.",
+      "answer": [
+        "independence"
+      ],
+      "why": "Funding is the quietest lever of all. If the budget can be squeezed after an unpopular decision, the institution is not independent whatever the statute says."
+    },
+    {
+      "ref": "C-19",
+      "text": "The arbitrator’s brother-in-law is HR director at the respondent company. He did not mention it.",
+      "answer": [
+        "impartiality"
+      ],
+      "why": "Independence is about the institution and the outside world; impartiality is about this individual and this case. The failure here is the undeclared interest."
+    },
+    {
+      "ref": "D-08",
+      "text": "The decision arrives as a single line: “Claim dismissed.” No reasons are given.",
+      "answer": [
+        "fairness"
+      ],
+      "why": "Reasoned decision-making is a fairness element. Justice has to be seen to be done, and an unexplained outcome cannot be."
+    },
+    {
+      "ref": "D-21",
+      "text": "Women are 42 per cent of the workforce and 9 per cent of claimants. Nobody has asked why.",
+      "answer": [
+        "equality"
+      ],
+      "why": "Equality is not about who walks through the door. It is about who never does — which is why the tool asks for disaggregated data."
+    },
+    {
+      "ref": "E-05",
+      "text": "The conciliator transferred in from the vehicle licensing desk three weeks ago, after two days of induction.",
+      "answer": [
+        "professionalism"
+      ],
+      "why": "Conciliation is a taught, accredited skill that decays without practice. Specialization and induction are both professionalism elements."
+    },
+    {
+      "ref": "E-17",
+      "text": "The tribunal awarded three months’ pay. Eighteen months later the worker is still trying to collect it.",
+      "answer": [
+        "enforcement"
+      ],
+      "why": "An unenforceable award is an expensive piece of paper. A system can score well on everything else and still fail here."
+    },
+    {
+      "ref": "F-06",
+      "text": "Both parties want to attempt a settlement they design themselves. They are told the matter must go to arbitration, but no legal or agreed requirement is identified.",
+      "answer": [
+        "voluntarism"
+      ],
+      "why": "Voluntarism means free choice of method and control of the outcome. It is not absolute — but a blanket requirement with no justification is a failure."
+    },
+    {
+      "ref": "F-12",
+      "text": "What a party said in mediation last month appears in the employer’s submission to the court.",
+      "answer": [
+        "confidentiality"
+      ],
+      "why": "No confidentiality, no candour. No candour, no settlement. Exceptions have to be defined in advance, not improvised."
+    },
+    {
+      "ref": "G-01",
+      "text": "The same shift-pattern dispute has arrived from the same sector eleven times. Nobody has asked why.",
+      "answer": [
+        "prevention"
+      ],
+      "why": "Repeated disputes with the same underlying cause call for analysis and preventive action, rather than processing every case in isolation."
+    },
+    {
+      "ref": "A-33",
+      "text": "The filing form runs to nine pages and must be countersigned by an advocate.",
+      "answer": [
+        "accessibility"
+      ],
+      "why": "A procedure only a lawyer can start is a procedure most workers cannot use. Complexity is a barrier like any other."
+    },
+    {
+      "ref": "C-24",
+      "text": "Appointments to the tribunal are made personally by the minister. There are no published criteria.",
+      "answer": [
+        "independence"
+      ],
+      "why": "Transparent, merit-based appointment is an independence element. An appointment that is a gift can be withdrawn like one."
+    },
+    {
+      "ref": "C-31",
+      "text": "A conciliator accepts a lunch invitation from one party’s lawyer while the case is live.",
+      "answer": [
+        "impartiality"
+      ],
+      "why": "The standard covers perceived as well as actual bias. Nothing improper need have been said for the process to look bought."
+    },
+    {
+      "ref": "E-28",
+      "text": "A settlement signed at conciliation cannot be enforced without starting fresh proceedings in another court.",
+      "answer": [
+        "enforcement"
+      ],
+      "why": "Enforcement includes an accessible way to give settlements legal effect and secure compliance. Ratification may be required in some systems; unnecessary fresh litigation can undermine the remedy."
+    },
+    {
+      "ref": "B-22",
+      "text": "A case has lain dormant for fourteen months. There is no route to complain about the delay.",
+      "answer": [
+        "speediness",
+        "accountability"
+      ],
+      "why": "Both are defensible. Speediness asks whether delay is monitored and whether there is a complaints route; accountability asks whether anyone answers for performance. Plenty of systems are slow — the ones that improve are the ones you can complain to."
+    }
+  ],
+  "CARDS": [
+    {
+      "id": "c1",
+      "name": "Standing joint forum",
+      "src": "R94",
+      "desc": "A regular body where management and workers discuss operational matters that are not on the bargaining table."
+    },
+    {
+      "id": "c2",
+      "name": "Notice and consultation",
+      "src": "R94",
+      "desc": "Tell people before you change something that affects them, and hear them before it is final."
+    },
+    {
+      "id": "c3",
+      "name": "Written grievance procedure",
+      "src": "R130",
+      "desc": "A route anyone can find and use, uncomplicated, with formality kept to a minimum."
+    },
+    {
+      "id": "c4",
+      "name": "Time limits, measured",
+      "src": "R130",
+      "desc": "A deadline at each stage, compliance reported monthly to someone senior."
+    },
+    {
+      "id": "c5",
+      "name": "Right to representation",
+      "src": "R130",
+      "desc": "Enable representation and accompaniment through the applicable grievance procedure, including appropriate workers’ representatives."
+    },
+    {
+      "id": "c6",
+      "name": "Supervisor conflict training",
+      "src": "ICMS",
+      "desc": "Line managers equipped to handle a disagreement rather than escalate it."
+    },
+    {
+      "id": "c7",
+      "name": "A second door",
+      "src": "ICMS",
+      "desc": "Another way in besides the line manager, and people know it exists."
+    },
+    {
+      "id": "c8",
+      "name": "Internal mediation",
+      "src": "ICMS",
+      "desc": "A neutral inside the organization that both sides actually trust."
+    },
+    {
+      "id": "c9",
+      "name": "The CBA disputes procedure",
+      "src": "C154",
+      "desc": "Use the dispute procedure agreed in the collective agreement, while preserving applicable legal rights and remedies."
+    },
+    {
+      "id": "c10",
+      "name": "External conciliation",
+      "src": "R92",
+      "desc": "Invite an external conciliator to help the parties find a voluntary settlement. Check applicable procedures and limitation periods."
+    },
+    {
+      "id": "c11",
+      "name": "Restate the decision",
+      "src": "—",
+      "desc": "Put the original decision in writing, formally, and hold the line."
+    }
+  ],
+  "SCENARIOS": [
+    {
+      "id": "roster",
+      "name": "The Roster",
+      "blurb": "An operational change nobody explained. Five stages from a shrug to a strike notice.",
+      "fail": "Notice of strike is served. The dispute is now public, expensive and out of your hands.",
+      "stages": [
+        {
+          "text": "A supervisor rewrites next month’s shift roster. No explanation is given. Two workers object at the end of the shift.",
+          "outcomes": {
+            "c1": {
+              "kind": "resolve",
+              "msg": "The roster change goes to the joint forum first. Both objections surface there and are settled before anyone feels ambushed."
+            },
+            "c2": {
+              "kind": "resolve",
+              "msg": "You explain the reason and hear the objection before the roster is final. It takes nine minutes and the dispute never exists."
+            },
+            "c3": {
+              "kind": "hold",
+              "msg": "A procedure exists, and they could use it. They have not yet, and the roster still makes no sense to them."
+            },
+            "c4": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unexplained roster change and the two workers’ objections. A deadline accelerates a process; it cannot by itself correct its substance, independence or representation. In this round it remains unanswered, so the dispute advances."
+            },
+            "c5": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unexplained roster change and the two workers’ objections. Representation supports a fair process, but does not by itself answer the complaint or require the other side to agree. In this round it remains unanswered, so the dispute advances."
+            },
+            "c6": {
+              "kind": "resolve",
+              "msg": "The supervisor is trained for exactly this. She explains the reasoning, takes the objection seriously, and adjusts one shift."
+            },
+            "c7": {
+              "kind": "hold",
+              "msg": "They now have somewhere else to raise it — useful, but the original grievance is still unanswered."
+            },
+            "c8": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unexplained roster change and the two workers’ objections. A mediator needs both parties’ agreement and a live issue they are willing to address; an offer alone does not settle the case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c9": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unexplained roster change and the two workers’ objections. An agreed collective procedure must apply to this issue and be activated by the parties; citing it alone is insufficient. In this round it remains unanswered, so the dispute advances."
+            },
+            "c10": {
+              "kind": "escalate",
+              "msg": "You have called in the public conciliator over a roster query. It signals that this is already a dispute, and now it is one."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "You put the roster in writing and restate it. It reads as a refusal to engage, and the shift closes ranks."
+            }
+          }
+        },
+        {
+          "text": "The supervisor tells them the decision is final. They repeat the conversation to the rest of the shift over lunch.",
+          "outcomes": {
+            "c1": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the supervisor’s refusal to reconsider and the shift’s growing distrust. A standing forum can support prevention and consultation, but a meeting alone does not determine this complaint. In this round it remains unanswered, so the dispute advances."
+            },
+            "c2": {
+              "kind": "escalate",
+              "msg": "Consultation after the decision is final is not consultation, and they say so."
+            },
+            "c3": {
+              "kind": "hold",
+              "msg": "You point them at the grievance procedure. Correct, but it reads as being sent away, and the shift is still talking."
+            },
+            "c4": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the supervisor’s refusal to reconsider and the shift’s growing distrust. A deadline accelerates a process; it cannot by itself correct its substance, independence or representation. In this round it remains unanswered, so the dispute advances."
+            },
+            "c5": {
+              "kind": "hold",
+              "msg": "They are told they may bring a representative. Helpful, and it also confirms to them that this is now formal."
+            },
+            "c6": {
+              "kind": "resolve",
+              "msg": "The supervisor reopens it herself rather than defending the position. The shift sees someone listening, and it stops there."
+            },
+            "c7": {
+              "kind": "resolve",
+              "msg": "They raise it through the second door. Someone outside the reporting line looks at it on its merits and fixes the roster."
+            },
+            "c8": {
+              "kind": "resolve",
+              "msg": "An internal mediator takes thirty minutes with the supervisor and the two workers. Everyone leaves having been heard."
+            },
+            "c9": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the supervisor’s refusal to reconsider and the shift’s growing distrust. An agreed collective procedure must apply to this issue and be activated by the parties; citing it alone is insufficient. In this round it remains unanswered, so the dispute advances."
+            },
+            "c10": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the supervisor’s refusal to reconsider and the shift’s growing distrust. External conciliation needs the parties’ engagement and a defined dispute; referring out does not itself answer the underlying concern. In this round it remains unanswered, so the dispute advances."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "A second written restatement. The shift now has evidence that nobody will move, and the rep is brought in."
+            }
+          }
+        },
+        {
+          "text": "The union representative emails HR setting out the objection. Nine days pass with no reply.",
+          "outcomes": {
+            "c1": {
+              "kind": "escalate",
+              "msg": "The joint forum is the right machinery at the wrong moment. This is past prevention."
+            },
+            "c2": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unanswered representative’s email after nine days. Information and consultation must be meaningful and directed to the disputed issue; merely announcing the decision does not review it. In this round it remains unanswered, so the dispute advances."
+            },
+            "c3": {
+              "kind": "resolve",
+              "msg": "You activate the grievance procedure, arrange a prompt meeting with the representative and address the roster objection. In this case the parties agree a workable change."
+            },
+            "c4": {
+              "kind": "resolve",
+              "msg": "The clock is the whole problem. A measured deadline means the email is answered on day two and the heat goes out of it."
+            },
+            "c5": {
+              "kind": "hold",
+              "msg": "Representation is confirmed. The rep is already involved, so this changes little."
+            },
+            "c6": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unanswered representative’s email after nine days. Training helps managers handle future conflict; it does not by itself supply the missing review or agreement in this case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c7": {
+              "kind": "hold",
+              "msg": "Another entry point helps future cases. It does not answer the email sitting in the inbox."
+            },
+            "c8": {
+              "kind": "resolve",
+              "msg": "Mediation is offered and taken. Nine days of silence is undone by one scheduled conversation."
+            },
+            "c9": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unanswered representative’s email after nine days. An agreed collective procedure must apply to this issue and be activated by the parties; citing it alone is insufficient. In this round it remains unanswered, so the dispute advances."
+            },
+            "c10": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unanswered representative’s email after nine days. External conciliation needs the parties’ engagement and a defined dispute; referring out does not itself answer the underlying concern. In this round it remains unanswered, so the dispute advances."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "You reply after nine days by restating the decision. The delay and the content both land badly."
+            }
+          }
+        },
+        {
+          "text": "A formal grievance is filed. HR acknowledges receipt and schedules nothing.",
+          "outcomes": {
+            "c1": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the formal grievance with no hearing scheduled. A standing forum can support prevention and consultation, but a meeting alone does not determine this complaint. In this round it remains unanswered, so the dispute advances."
+            },
+            "c2": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the formal grievance with no hearing scheduled. Information and consultation must be meaningful and directed to the disputed issue; merely announcing the decision does not review it. In this round it remains unanswered, so the dispute advances."
+            },
+            "c3": {
+              "kind": "hold",
+              "msg": "The procedure exists and is now in use. It is still not moving."
+            },
+            "c4": {
+              "kind": "resolve",
+              "msg": "Measured deadlines trigger a prompt hearing rather than another acknowledgement. The roster concern is heard and the parties agree a workable response."
+            },
+            "c5": {
+              "kind": "resolve",
+              "msg": "The worker and representative take part in a properly convened hearing. The concern is tested, reasons are given and a practical shift arrangement is accepted in this case."
+            },
+            "c6": {
+              "kind": "escalate",
+              "msg": "Training the supervisor is the right fix three weeks too late."
+            },
+            "c7": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the formal grievance with no hearing scheduled. Another entry point needs someone empowered to act; signposting alone leaves the substantive issue unresolved. In this round it remains unanswered, so the dispute advances."
+            },
+            "c8": {
+              "kind": "resolve",
+              "msg": "Mediation runs alongside the grievance and produces an agreed shift swap. The grievance is withdrawn."
+            },
+            "c9": {
+              "kind": "hold",
+              "msg": "The collective agreement route is available. Nobody has opened it yet."
+            },
+            "c10": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the formal grievance with no hearing scheduled. External conciliation needs the parties’ engagement and a defined dispute; referring out does not itself answer the underlying concern. In this round it remains unanswered, so the dispute advances."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "Restating the decision in response to a formal grievance is a procedural failure, and the union now has a case worth running."
+            }
+          }
+        },
+        {
+          "text": "The union declares a dispute and reports it to the ministry. A conciliator is assigned.",
+          "outcomes": {
+            "c1": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the declared dispute now before a public conciliator. A standing forum can support prevention and consultation, but a meeting alone does not determine this complaint. In this round it remains unanswered, so the dispute advances."
+            },
+            "c2": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the declared dispute now before a public conciliator. Information and consultation must be meaningful and directed to the disputed issue; merely announcing the decision does not review it. In this round it remains unanswered, so the dispute advances."
+            },
+            "c3": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the declared dispute now before a public conciliator. A procedure needs an actual hearing, a responsible decision-maker and follow-through, rather than a form on its own. In this round it remains unanswered, so the dispute advances."
+            },
+            "c4": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the declared dispute now before a public conciliator. A deadline accelerates a process; it cannot by itself correct its substance, independence or representation. In this round it remains unanswered, so the dispute advances."
+            },
+            "c5": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the declared dispute now before a public conciliator. Representation supports a fair process, but does not by itself answer the complaint or require the other side to agree. In this round it remains unanswered, so the dispute advances."
+            },
+            "c6": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the declared dispute now before a public conciliator. Training helps managers handle future conflict; it does not by itself supply the missing review or agreement in this case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c7": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the declared dispute now before a public conciliator. Another entry point needs someone empowered to act; signposting alone leaves the substantive issue unresolved. In this round it remains unanswered, so the dispute advances."
+            },
+            "c8": {
+              "kind": "hold",
+              "msg": "Internal mediation is offered. The union will consider it, but the ministry clock is already running."
+            },
+            "c9": {
+              "kind": "resolve",
+              "msg": "The parties activate the dispute procedure in their collective agreement and reach an agreement within its timetable. Applicable statutory rights remain available."
+            },
+            "c10": {
+              "kind": "resolve",
+              "msg": "You engage with the conciliator properly and early. Agreement is reached in two meetings and no notice is served."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "Holding the line at conciliation stage reads as bad faith and hardens the union’s mandate."
+            }
+          }
+        }
+      ],
+      "failureLabel": "Industrial action"
+    },
+    {
+      "id": "dismissal",
+      "name": "The Dismissal",
+      "blurb": "An individual case handled at speed. Five stages from a ten-minute meeting to a tribunal claim.",
+      "fail": "The claim proceeds to a tribunal hearing. Costs and management time rise, and the tribunal will determine the merits. Going to court is a legitimate route, not evidence that the claimant was wrong.",
+      "stages": [
+        {
+          "text": "A storekeeper is dismissed for alleged theft after a ten-minute meeting with her supervisor. She denies it.",
+          "outcomes": {
+            "c1": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the dismissal imposed without a meaningful opportunity to answer. A standing forum can support prevention and consultation, but a meeting alone does not determine this complaint. In this round it remains unanswered, so the dispute advances."
+            },
+            "c2": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the dismissal imposed without a meaningful opportunity to answer. Information and consultation must be meaningful and directed to the disputed issue; merely announcing the decision does not review it. In this round it remains unanswered, so the dispute advances."
+            },
+            "c3": {
+              "kind": "resolve",
+              "msg": "You reopen the dismissal through an appropriate review: disclose the allegation, hear the worker’s response and examine the evidence. A reasoned correction of the decision settles this fictional case."
+            },
+            "c4": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the dismissal imposed without a meaningful opportunity to answer. A deadline accelerates a process; it cannot by itself correct its substance, independence or representation. In this round it remains unanswered, so the dispute advances."
+            },
+            "c5": {
+              "kind": "resolve",
+              "msg": "You permit appropriate representation and reopen the dismissal for a fair review. The evidence is tested and a reasoned outcome is accepted in this case; representation alone would not guarantee that result."
+            },
+            "c6": {
+              "kind": "hold",
+              "msg": "Better-trained supervisors would have prevented this. It has already happened."
+            },
+            "c7": {
+              "kind": "hold",
+              "msg": "She has somewhere else to take it. The dismissal still happened after a ten-minute meeting."
+            },
+            "c8": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the dismissal imposed without a meaningful opportunity to answer. A mediator needs both parties’ agreement and a live issue they are willing to address; an offer alone does not settle the case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c9": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the dismissal imposed without a meaningful opportunity to answer. An agreed collective procedure must apply to this issue and be activated by the parties; citing it alone is insufficient. In this round it remains unanswered, so the dispute advances."
+            },
+            "c10": {
+              "kind": "escalate",
+              "msg": "In this fictional case, referring out without offering a meaningful internal review leaves the hearing complaint unanswered. External conciliation can be appropriate early by agreement; it does not cure this omission by itself."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "Confirming the dismissal in writing without a hearing is the single most expensive thing you can do here."
+            }
+          }
+        },
+        {
+          "text": "She asks to appeal. She is told she may bring a colleague, but not her union representative.",
+          "outcomes": {
+            "c1": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the blanket restriction on the worker’s chosen union representative. A standing forum can support prevention and consultation, but a meeting alone does not determine this complaint. In this round it remains unanswered, so the dispute advances."
+            },
+            "c2": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the blanket restriction on the worker’s chosen union representative. Information and consultation must be meaningful and directed to the disputed issue; merely announcing the decision does not review it. In this round it remains unanswered, so the dispute advances."
+            },
+            "c3": {
+              "kind": "resolve",
+              "msg": "The procedure is applied as written, including the representation clause everyone had forgotten."
+            },
+            "c4": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the blanket restriction on the worker’s chosen union representative. A deadline accelerates a process; it cannot by itself correct its substance, independence or representation. In this round it remains unanswered, so the dispute advances."
+            },
+            "c5": {
+              "kind": "resolve",
+              "msg": "You remove the blanket restriction and enable appropriate representation under the applicable procedure. The appeal is heard fairly and the parties resolve the case."
+            },
+            "c6": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the blanket restriction on the worker’s chosen union representative. Training helps managers handle future conflict; it does not by itself supply the missing review or agreement in this case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c7": {
+              "kind": "hold",
+              "msg": "An alternative route is offered. The representation problem is still there."
+            },
+            "c8": {
+              "kind": "hold",
+              "msg": "Mediation is offered and she is willing. The appeal question remains unresolved."
+            },
+            "c9": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the blanket restriction on the worker’s chosen union representative. An agreed collective procedure must apply to this issue and be activated by the parties; citing it alone is insufficient. In this round it remains unanswered, so the dispute advances."
+            },
+            "c10": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the blanket restriction on the worker’s chosen union representative. External conciliation needs the parties’ engagement and a defined dispute; referring out does not itself answer the underlying concern. In this round it remains unanswered, so the dispute advances."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "You restate the restriction. You have now created a second, cleaner complaint on top of the first."
+            }
+          }
+        },
+        {
+          "text": "The appeal is heard by the same manager who took the decision to dismiss.",
+          "outcomes": {
+            "c1": {
+              "kind": "escalate",
+              "msg": "A joint forum has no role in an individual disciplinary appeal."
+            },
+            "c2": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the original manager hearing the appeal against their own decision. Information and consultation must be meaningful and directed to the disputed issue; merely announcing the decision does not review it. In this round it remains unanswered, so the dispute advances."
+            },
+            "c3": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the original manager hearing the appeal against their own decision. A procedure needs an actual hearing, a responsible decision-maker and follow-through, rather than a form on its own. In this round it remains unanswered, so the dispute advances."
+            },
+            "c4": {
+              "kind": "hold",
+              "msg": "The appeal happens quickly. Speed does not cure who is sitting in the chair."
+            },
+            "c5": {
+              "kind": "hold",
+              "msg": "She is properly represented at the appeal. It is still the same manager deciding."
+            },
+            "c6": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the original manager hearing the appeal against their own decision. Training helps managers handle future conflict; it does not by itself supply the missing review or agreement in this case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c7": {
+              "kind": "resolve",
+              "msg": "A different route means a different decision-maker. Someone with no stake in the original decision hears it."
+            },
+            "c8": {
+              "kind": "resolve",
+              "msg": "Both parties accept a neutral mediator who had no role in the dismissal. They agree a settlement, without treating mediation as a substitute for an independent appeal if no settlement is reached."
+            },
+            "c9": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the original manager hearing the appeal against their own decision. An agreed collective procedure must apply to this issue and be activated by the parties; citing it alone is insufficient. In this round it remains unanswered, so the dispute advances."
+            },
+            "c10": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the original manager hearing the appeal against their own decision. External conciliation needs the parties’ engagement and a defined dispute; referring out does not itself answer the underlying concern. In this round it remains unanswered, so the dispute advances."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "The same manager confirms his own decision, in writing. There is now nothing left to argue about internally."
+            }
+          }
+        },
+        {
+          "text": "Her representative writes alleging unfair dismissal. HR replies that the matter is closed.",
+          "outcomes": {
+            "c1": {
+              "kind": "escalate",
+              "msg": "The immediate issue is HR’s refusal to consider the live unfair-dismissal complaint. A standing forum can support prevention and consultation, but a meeting alone does not determine this complaint. In this round it remains unanswered, so the dispute advances."
+            },
+            "c2": {
+              "kind": "escalate",
+              "msg": "The immediate issue is HR’s refusal to consider the live unfair-dismissal complaint. Information and consultation must be meaningful and directed to the disputed issue; merely announcing the decision does not review it. In this round it remains unanswered, so the dispute advances."
+            },
+            "c3": {
+              "kind": "escalate",
+              "msg": "The immediate issue is HR’s refusal to consider the live unfair-dismissal complaint. A procedure needs an actual hearing, a responsible decision-maker and follow-through, rather than a form on its own. In this round it remains unanswered, so the dispute advances."
+            },
+            "c4": {
+              "kind": "hold",
+              "msg": "A deadline is set for a reply. Better than silence, but the substance is unaddressed."
+            },
+            "c5": {
+              "kind": "hold",
+              "msg": "Representation is confirmed, which was never really the issue at this stage."
+            },
+            "c6": {
+              "kind": "escalate",
+              "msg": "The immediate issue is HR’s refusal to consider the live unfair-dismissal complaint. Training helps managers handle future conflict; it does not by itself supply the missing review or agreement in this case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c7": {
+              "kind": "escalate",
+              "msg": "The immediate issue is HR’s refusal to consider the live unfair-dismissal complaint. Another entry point needs someone empowered to act; signposting alone leaves the substantive issue unresolved. In this round it remains unanswered, so the dispute advances."
+            },
+            "c8": {
+              "kind": "resolve",
+              "msg": "Mediation is offered before positions harden. A without-prejudice conversation finds a settlement both sides can live with."
+            },
+            "c9": {
+              "kind": "resolve",
+              "msg": "The disputes procedure in the collective agreement is opened. It binds both sides and it is faster than the tribunal."
+            },
+            "c10": {
+              "kind": "escalate",
+              "msg": "The immediate issue is HR’s refusal to consider the live unfair-dismissal complaint. External conciliation needs the parties’ engagement and a defined dispute; referring out does not itself answer the underlying concern. In this round it remains unanswered, so the dispute advances."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "“The matter is closed” is a decision to litigate. You have just made it for them."
+            }
+          }
+        },
+        {
+          "text": "A claim is filed at the labour tribunal. A conciliation conference is offered before hearing.",
+          "outcomes": {
+            "c1": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the tribunal claim and the offered conciliation conference. A standing forum can support prevention and consultation, but a meeting alone does not determine this complaint. In this round it remains unanswered, so the dispute advances."
+            },
+            "c2": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the tribunal claim and the offered conciliation conference. Information and consultation must be meaningful and directed to the disputed issue; merely announcing the decision does not review it. In this round it remains unanswered, so the dispute advances."
+            },
+            "c3": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the tribunal claim and the offered conciliation conference. A procedure needs an actual hearing, a responsible decision-maker and follow-through, rather than a form on its own. In this round it remains unanswered, so the dispute advances."
+            },
+            "c4": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the tribunal claim and the offered conciliation conference. A deadline accelerates a process; it cannot by itself correct its substance, independence or representation. In this round it remains unanswered, so the dispute advances."
+            },
+            "c5": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the tribunal claim and the offered conciliation conference. Representation supports a fair process, but does not by itself answer the complaint or require the other side to agree. In this round it remains unanswered, so the dispute advances."
+            },
+            "c6": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the tribunal claim and the offered conciliation conference. Training helps managers handle future conflict; it does not by itself supply the missing review or agreement in this case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c7": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the tribunal claim and the offered conciliation conference. Another entry point needs someone empowered to act; signposting alone leaves the substantive issue unresolved. In this round it remains unanswered, so the dispute advances."
+            },
+            "c8": {
+              "kind": "hold",
+              "msg": "Internal mediation is offered, late. Her representative will consider it alongside the claim."
+            },
+            "c9": {
+              "kind": "resolve",
+              "msg": "The agreed dispute procedure provides an accepted route to settle this case. The parties record the agreement and check its legal effect, while preserving applicable tribunal rights."
+            },
+            "c10": {
+              "kind": "resolve",
+              "msg": "You take the conciliation seriously and settle. It costs money, but a fraction of a hearing and none of the publicity."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "Restating the dismissal without addressing the live complaint closes off this settlement opportunity. A tribunal hearing may still be necessary to determine the merits."
+            }
+          }
+        }
+      ],
+      "failureLabel": "The hearing"
+    },
+    {
+      "id": "restructure",
+      "name": "The Restructure",
+      "blurb": "Sixty jobs and a plan nobody has announced. Five stages from a boardroom decision to a go-slow.",
+      "fail": "The go-slow spreads to two more sites. Output is down, the press has the story, and the restructure has stalled.",
+      "stages": [
+        {
+          "text": "Head office decides to outsource the warehouse. Sixty jobs are affected. Nothing has been announced.",
+          "outcomes": {
+            "c1": {
+              "kind": "resolve",
+              "msg": "The joint forum opens an early discussion about the proposed outsourcing. The parties identify concerns and agree consultation and bargaining arrangements without replacing any collective bargaining rights."
+            },
+            "c2": {
+              "kind": "resolve",
+              "msg": "You tell the workforce and their representatives before the decision is irreversible, and you hear them. It changes two things in the plan and most of the anger never forms."
+            },
+            "c3": {
+              "kind": "escalate",
+              "msg": "In this case, directing the whole workforce to individual grievances leaves the collective outsourcing proposal unexplained. Grievance procedures can cover joint rights complaints, but are not a substitute for bargaining over proposed terms."
+            },
+            "c4": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unannounced outsourcing proposal affecting sixty jobs. A deadline accelerates a process; it cannot by itself correct its substance, independence or representation. In this round it remains unanswered, so the dispute advances."
+            },
+            "c5": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unannounced outsourcing proposal affecting sixty jobs. Representation supports a fair process, but does not by itself answer the complaint or require the other side to agree. In this round it remains unanswered, so the dispute advances."
+            },
+            "c6": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unannounced outsourcing proposal affecting sixty jobs. Training helps managers handle future conflict; it does not by itself supply the missing review or agreement in this case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c7": {
+              "kind": "hold",
+              "msg": "Channels exist for people to ask questions. Nobody knows yet that there is anything to ask about."
+            },
+            "c8": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unannounced outsourcing proposal affecting sixty jobs. A mediator needs both parties’ agreement and a live issue they are willing to address; an offer alone does not settle the case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c9": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unannounced outsourcing proposal affecting sixty jobs. An agreed collective procedure must apply to this issue and be activated by the parties; citing it alone is insufficient. In this round it remains unanswered, so the dispute advances."
+            },
+            "c10": {
+              "kind": "escalate",
+              "msg": "Calling the conciliator before announcing anything tells the union there is something to hide."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "There is no decision to restate yet — and putting it in writing before anyone has been told guarantees it leaks as a fait accompli."
+            }
+          }
+        },
+        {
+          "text": "A draft of the plan leaks. Rumours spread that the whole site will be closed.",
+          "outcomes": {
+            "c1": {
+              "kind": "resolve",
+              "msg": "The forum meets at short notice, sees the real numbers, and becomes the channel that corrects the rumour."
+            },
+            "c2": {
+              "kind": "resolve",
+              "msg": "You put the actual plan in front of them within a day. Sixty is bad news; four hundred was the rumour. Correcting it buys back the room."
+            },
+            "c3": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the information vacuum following the leaked plan. A procedure needs an actual hearing, a responsible decision-maker and follow-through, rather than a form on its own. In this round it remains unanswered, so the dispute advances."
+            },
+            "c4": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the information vacuum following the leaked plan. A deadline accelerates a process; it cannot by itself correct its substance, independence or representation. In this round it remains unanswered, so the dispute advances."
+            },
+            "c5": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the information vacuum following the leaked plan. Representation supports a fair process, but does not by itself answer the complaint or require the other side to agree. In this round it remains unanswered, so the dispute advances."
+            },
+            "c6": {
+              "kind": "hold",
+              "msg": "Supervisors are briefed to handle the conversations. They can only repeat what they are told, and they have not been told much."
+            },
+            "c7": {
+              "kind": "resolve",
+              "msg": "Open channels mean questions come to you rather than circulating. The rumour dies in about two hours."
+            },
+            "c8": {
+              "kind": "hold",
+              "msg": "A mediator is available for the worst-affected teams. The information vacuum is still there."
+            },
+            "c9": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the information vacuum following the leaked plan. An agreed collective procedure must apply to this issue and be activated by the parties; citing it alone is insufficient. In this round it remains unanswered, so the dispute advances."
+            },
+            "c10": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the information vacuum following the leaked plan. External conciliation needs the parties’ engagement and a defined dispute; referring out does not itself answer the underlying concern. In this round it remains unanswered, so the dispute advances."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "A formal restatement that confirms nothing and denies nothing is read as confirmation of the worst version."
+            }
+          }
+        },
+        {
+          "text": "The union demands the selection criteria. Management says it is a commercial decision.",
+          "outcomes": {
+            "c1": {
+              "kind": "hold",
+              "msg": "The forum discusses the restructure in general terms. The criteria question is still unanswered."
+            },
+            "c2": {
+              "kind": "resolve",
+              "msg": "You share the criteria and consult on them. They propose one change to the service-length weighting, you accept it, and the process is now joint."
+            },
+            "c3": {
+              "kind": "escalate",
+              "msg": "The collective demand for selection criteria remains unanswered. Individual or joint rights grievances may be relevant, but simply handing out complaint forms does not address this bargaining and consultation issue."
+            },
+            "c4": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unanswered request for selection criteria. A deadline accelerates a process; it cannot by itself correct its substance, independence or representation. In this round it remains unanswered, so the dispute advances."
+            },
+            "c5": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unanswered request for selection criteria. Representation supports a fair process, but does not by itself answer the complaint or require the other side to agree. In this round it remains unanswered, so the dispute advances."
+            },
+            "c6": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unanswered request for selection criteria. Training helps managers handle future conflict; it does not by itself supply the missing review or agreement in this case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c7": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unanswered request for selection criteria. Another entry point needs someone empowered to act; signposting alone leaves the substantive issue unresolved. In this round it remains unanswered, so the dispute advances."
+            },
+            "c8": {
+              "kind": "hold",
+              "msg": "Mediation is offered on the relationship. The substantive demand remains."
+            },
+            "c9": {
+              "kind": "resolve",
+              "msg": "The collective agreement already covers redundancy selection. You follow it, and the argument becomes technical rather than existential."
+            },
+            "c10": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the unanswered request for selection criteria. External conciliation needs the parties’ engagement and a defined dispute; referring out does not itself answer the underlying concern. In this round it remains unanswered, so the dispute advances."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "“Commercial decision” restated in writing is the sentence that appears in every subsequent union communication."
+            }
+          }
+        },
+        {
+          "text": "Selection letters go out. Two long-serving employees are on the list and file grievances.",
+          "outcomes": {
+            "c1": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the two pending grievances about selection. A standing forum can support prevention and consultation, but a meeting alone does not determine this complaint. In this round it remains unanswered, so the dispute advances."
+            },
+            "c2": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the two pending grievances about selection. Information and consultation must be meaningful and directed to the disputed issue; merely announcing the decision does not review it. In this round it remains unanswered, so the dispute advances."
+            },
+            "c3": {
+              "kind": "resolve",
+              "msg": "The grievances are heard properly and promptly. One selection is overturned on a scoring error, which proves the process works."
+            },
+            "c4": {
+              "kind": "resolve",
+              "msg": "Deadlines mean both grievances are heard inside two weeks, before the collective mood sets."
+            },
+            "c5": {
+              "kind": "resolve",
+              "msg": "Both are represented at their hearings. The outcome is accepted because the process visibly was not a formality."
+            },
+            "c6": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the two pending grievances about selection. Training helps managers handle future conflict; it does not by itself supply the missing review or agreement in this case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c7": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the two pending grievances about selection. Another entry point needs someone empowered to act; signposting alone leaves the substantive issue unresolved. In this round it remains unanswered, so the dispute advances."
+            },
+            "c8": {
+              "kind": "hold",
+              "msg": "Mediation is offered to both. Useful, but the grievances still need determining."
+            },
+            "c9": {
+              "kind": "hold",
+              "msg": "The agreed procedure is available and will matter if this goes collective."
+            },
+            "c10": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the two pending grievances about selection. External conciliation needs the parties’ engagement and a defined dispute; referring out does not itself answer the underlying concern. In this round it remains unanswered, so the dispute advances."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "Restating the selection decision in response to a grievance tells everyone else on the list not to bother."
+            }
+          }
+        },
+        {
+          "text": "The union serves notice of a go-slow across the site.",
+          "outcomes": {
+            "c1": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the collective go-slow notice. A standing forum can support prevention and consultation, but a meeting alone does not determine this complaint. In this round it remains unanswered, so the dispute advances."
+            },
+            "c2": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the collective go-slow notice. Information and consultation must be meaningful and directed to the disputed issue; merely announcing the decision does not review it. In this round it remains unanswered, so the dispute advances."
+            },
+            "c3": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the collective go-slow notice. A procedure needs an actual hearing, a responsible decision-maker and follow-through, rather than a form on its own. In this round it remains unanswered, so the dispute advances."
+            },
+            "c4": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the collective go-slow notice. A deadline accelerates a process; it cannot by itself correct its substance, independence or representation. In this round it remains unanswered, so the dispute advances."
+            },
+            "c5": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the collective go-slow notice. Representation supports a fair process, but does not by itself answer the complaint or require the other side to agree. In this round it remains unanswered, so the dispute advances."
+            },
+            "c6": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the collective go-slow notice. Training helps managers handle future conflict; it does not by itself supply the missing review or agreement in this case. In this round it remains unanswered, so the dispute advances."
+            },
+            "c7": {
+              "kind": "escalate",
+              "msg": "The immediate issue is the collective go-slow notice. Another entry point needs someone empowered to act; signposting alone leaves the substantive issue unresolved. In this round it remains unanswered, so the dispute advances."
+            },
+            "c8": {
+              "kind": "resolve",
+              "msg": "A trusted internal neutral gets both sides back into a room before the notice takes effect."
+            },
+            "c9": {
+              "kind": "resolve",
+              "msg": "The agreed disputes procedure is opened. Both sides are bound by it and it has a timetable."
+            },
+            "c10": {
+              "kind": "resolve",
+              "msg": "The public conciliator is brought in and both sides use the time properly. A revised package is agreed and the notice is withdrawn."
+            },
+            "c11": {
+              "kind": "escalate",
+              "msg": "Restating the position in the face of a go-slow notice removes the union’s last reason to hold its members back."
+            }
+          }
+        }
+      ],
+      "failureLabel": "Industrial action"
+    }
+  ],
+  "TIERS": [
+    {
+      "label": "The conversation",
+      "cost": 1
+    },
+    {
+      "label": "The conversation",
+      "cost": 3
+    },
+    {
+      "label": "The procedure",
+      "cost": 9
+    },
+    {
+      "label": "The procedure",
+      "cost": 26
+    },
+    {
+      "label": "The institution",
+      "cost": 70
+    }
+  ],
+  "FAILURE": {
+    "label": "The street",
+    "cost": 200
+  },
+  "SOURCES": [
+    {
+      "label": "ILO diagnostic tool (2023)",
+      "url": "https://www.ilo.org/publications/access-labour-justice-diagnostic-tool-self-assessing-effectiveness-labour"
+    },
+    {
+      "label": "R94 · Workplace cooperation",
+      "url": "https://normlex.ilo.org/dyn/nrmlx_en/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:R094"
+    },
+    {
+      "label": "R130 · Examination of grievances",
+      "url": "https://normlex.ilo.org/dyn/nrmlx_en/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:R130"
+    },
+    {
+      "label": "C154 · Collective bargaining",
+      "url": "https://normlex.ilo.org/dyn/nrmlx_en/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C154"
+    },
+    {
+      "label": "R92 · Voluntary conciliation and arbitration",
+      "url": "https://normlex.ilo.org/dyn/nrmlx_en/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:R092"
+    }
+  ]
+}

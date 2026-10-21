@@ -1,0 +1,38 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import ts from 'typescript';
+import {DatabaseSync} from 'node:sqlite';
+import {randomBytes,pbkdf2Sync} from 'node:crypto';
+const source=fs.readFileSync('lib/api.ts','utf8').replace("import DATA from './game/data.json';","import fs from 'node:fs';const DATA=JSON.parse(fs.readFileSync(new URL('./game/data.json',import.meta.url),'utf8'));");
+const compiled=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
+fs.writeFileSync('lib/.api-test.mjs',compiled);
+const {handle}=await import('../lib/.api-test.mjs');
+const sqlite=new DatabaseSync(':memory:');sqlite.exec(fs.readFileSync('drizzle/0000_mysterious_ikaris.sql','utf8'));
+class Statement{constructor(sql,args=[]){this.sql=sql;this.args=args;}bind(...args){return new Statement(this.sql,args);}async first(){return sqlite.prepare(this.sql).get(...this.args)||null;}async all(){return {results:sqlite.prepare(this.sql).all(...this.args)};}async run(){const r=sqlite.prepare(this.sql).run(...this.args);return {meta:{changes:Number(r.changes)},success:true};}}
+const DB={prepare:sql=>new Statement(sql),batch:async statements=>{sqlite.exec('BEGIN');try{const results=[];for(const s of statements)results.push(await s.run());sqlite.exec('COMMIT');return results;}catch(e){sqlite.exec('ROLLBACK');throw e;}}};
+const password=randomBytes(16).toString('hex'),salt=randomBytes(16).toString('hex');const env={DB,FACILITATOR_EMAIL:'test@example.com',FACILITATOR_PASSWORD_HASH:'100000:'+salt+':'+pbkdf2Sync(password,Buffer.from(salt,'hex'),100000,32,'sha256').toString('hex')};
+let checks=0;
+async function req(path,{method='GET',body,token,origin='https://darrindookie-itcilo.github.io',ip='test'}={}){const r=await handle(new Request('https://test.invalid/api'+path,{method,headers:{Origin:origin,'CF-Connecting-IP':ip,...(body?{'Content-Type':'application/json'}:{}),...(token?{Authorization:'Bearer '+token}:{})},body:body?JSON.stringify(body):undefined}),env);let j={};if(r.status!==204)j=await r.json();return {status:r.status,json:j,headers:r.headers};}
+function eq(a,b,msg){assert.deepEqual(a,b,msg);checks++;}
+eq((await req('/rooms')).status,401,'Anonymous cannot list sessions');eq((await req('/room/ABCDEFGH')).status,401,'Anonymous cannot read responses');eq((await req('/rooms',{origin:'https://other.invalid'})).status,403,'CORS origin restricted');
+eq((await req('/login',{method:'POST',body:{email:'test@example.com',password:'wrong'}})).status,401,'Bad password rejected');
+const login=await req('/login',{method:'POST',body:{email:'test@example.com',password}});eq(login.status,200,'Correct password accepted');const token=login.json.token;eq((await req('/me',{token})).status,200,'Session verifies');
+const created=await req('/rooms',{method:'POST',token,body:{game:'diagnostic',name:'Integration test',settings:{count:8,seed:'test',minutes:15}}});eq(created.status,201,'Session created');const code=created.json.room.code;
+const joined=await req('/join',{method:'POST',body:{code,name:'Team A'}});eq(joined.status,201,'Team joins without login');const tt=joined.json.token;let team=joined.json.team;
+eq((await req('/join',{method:'POST',body:{code,name:'Team A'}})).status,409,'Duplicate team rejected');
+let action={revision:team.revision,requestId:crypto.randomUUID(),action:{type:'answer',choice:'efficiency',reason:'Test reason'}};
+const answer=await req('/team/action',{method:'POST',token:tt,body:action});eq(answer.status,200,'Move accepted');team=answer.json.team;eq(team.state.log.length,1,'Choice recorded');
+const replay=await req('/team/action',{method:'POST',token:tt,body:action});eq(replay.json.team.state.log.length,1,'Network retry cannot double count');eq(replay.json.team.revision,team.revision,'Retry does not increase revision');
+const stale=await req('/team/action',{method:'POST',token:tt,body:{...action,requestId:crypto.randomUUID()}});eq(stale.status,409,'Stale tab cannot overwrite progress');
+const board=await req('/room/'+code,{token});eq(board.json.teams[0].state.log[0].reason,'Test reason','Facilitator receives individual reasoning');
+eq((await req('/room/'+code,{token:tt})).status,401,'Team token cannot read private responses');
+const publicBoard=await req('/scoreboard/'+code);eq(publicBoard.status,200,'Shared standings available by code');eq(publicBoard.json.teams[0].state,undefined,'Public standings hide response state');
+await req('/room/'+code+'/control',{method:'POST',token,body:{action:'pause'}});
+const blocked=await req('/team/action',{method:'POST',token:tt,body:{revision:team.revision,requestId:crypto.randomUUID(),action:{type:'next'}}});eq(blocked.status,409,'Pause blocks team actions');
+await req('/room/'+code+'/control',{method:'POST',token,body:{action:'extend'}});const paused=await req('/team',{token:tt});eq(paused.json.room.remaining>900000,true,'Time extension applied while paused');
+await req('/room/'+code+'/control',{method:'POST',token,body:{action:'resume'}});
+await req('/room/'+code+'/reset/'+team.id,{method:'POST',token,body:{}});const reset=await req('/room/'+code,{token});eq(reset.json.attempts.length,1,'Reset preserves previous attempt');eq(reset.json.attempts[0].state.log.length,1,'Archived answers retained');eq(reset.json.teams[0].state.log.length,0,'New attempt starts clean');
+await req('/room/'+code+'/control',{method:'POST',token,body:{action:'close'}});eq((await req('/join',{method:'POST',body:{code,name:'Late team'}})).status,409,'Closed room refuses new joins');
+eq((await req('/logout',{method:'POST',token,body:{}})).status,200,'Logout succeeds');eq((await req('/me',{token})).status,401,'Logout revokes session');
+for(let i=0;i<5;i++)await req('/login',{method:'POST',body:{email:'test@example.com',password:'bad'},ip:'rate-test'});eq((await req('/login',{method:'POST',body:{email:'test@example.com',password},ip:'rate-test'})).status,429,'Login brute-force limit enforced');
+fs.unlinkSync('lib/.api-test.mjs');console.log(`${checks} API integration checks passed: authentication, authorization, persistence, idempotency, pause, restart archives and rate limits.`);

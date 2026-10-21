@@ -1,0 +1,6 @@
+import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core';
+export const rooms=sqliteTable('rooms',{code:text('code').primaryKey(),name:text('name').notNull(),game:text('game').notNull(),settings:text('settings').notNull(),status:text('status').notNull(),createdAt:integer('created_at').notNull(),deadline:integer('deadline'),remaining:integer('remaining').notNull()});
+export const teams=sqliteTable('teams',{id:text('id').primaryKey(),room:text('room').notNull().references(()=>rooms.code),name:text('name').notNull(),tokenHash:text('token_hash').notNull().unique(),state:text('state').notNull(),revision:integer('revision').notNull(),updatedAt:integer('updated_at').notNull()});
+export const attempts=sqliteTable('attempts',{id:text('id').primaryKey(),team:text('team').notNull().references(()=>teams.id),room:text('room').notNull().references(()=>rooms.code),state:text('state').notNull(),savedAt:integer('saved_at').notNull()});
+export const sessions=sqliteTable('sessions',{tokenHash:text('token_hash').primaryKey(),expires:integer('expires').notNull()});
+export const loginLimits=sqliteTable('login_limits',{key:text('key').primaryKey(),count:integer('count').notNull(),resetAt:integer('reset_at').notNull()});
