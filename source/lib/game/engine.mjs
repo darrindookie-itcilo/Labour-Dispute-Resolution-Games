@@ -19,12 +19,12 @@ export function settingsFor(game,s={}){
 }
 export function newGame(data,game,settings,team,now=Date.now()){
  const s=settingsFor(game,settings);
- return {version:2,game,team:String(team).trim().slice(0,40)||'Team',settings:s,deck:game==='diagnostic'?makeDeck(data,s.count,s.seed):[],index:0,score:0,lifelines:2,hinted:false,disabled:[],phase:'question',log:[],streak:0,bestStreak:0,stage:s.startStage,scenarioIndex:0,scenarios:s.scenario==='all'?['roster','dismissal','restructure']:[s.scenario],used:[],held:0,scenarioResults:[],feedback:null,startedAt:now,endedAt:null,reflection:'',requestIds:[]};
+ return {version:2,game,team:String(team).trim().slice(0,40)||'Team',settings:s,deck:game==='diagnostic'?makeDeck(data,s.count,s.seed):[],index:0,score:0,lifelines:2,hinted:false,disabled:[],phase:'question',log:[],streak:0,bestStreak:0,stage:s.startStage,scenarioIndex:0,scenarios:s.scenario==='all'?['roster','dismissal','restructure']:[s.scenario],used:[],held:0,scenarioResults:[],feedback:null,startedAt:now,updatedAt:now,endedAt:null,reflection:'',requestIds:[]};
 }
 export function currentScenario(data,s){return data.SCENARIOS.find(x=>x.id===s.scenarios[s.scenarioIndex]);}
 export function costFor(data,s){return data.TIERS[s.stage].cost+s.held*2;}
 export function advance(data,old,action,now=Date.now()){
- const s=JSON.parse(JSON.stringify(old));
+ const s=JSON.parse(JSON.stringify(old));s.updatedAt=now;
  if(action.type==='reflection'){s.reflection=String(action.value||'').slice(0,1500);return s;}
  if(s.phase==='done')throw Error('This game is complete.');
  if(s.game==='diagnostic'){

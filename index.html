@@ -1154,12 +1154,12 @@ function settingsFor(game,s={}){
 }
 function newGame(data,game,settings,team,now=Date.now()){
  const s=settingsFor(game,settings);
- return {version:2,game,team:String(team).trim().slice(0,40)||'Team',settings:s,deck:game==='diagnostic'?makeDeck(data,s.count,s.seed):[],index:0,score:0,lifelines:2,hinted:false,disabled:[],phase:'question',log:[],streak:0,bestStreak:0,stage:s.startStage,scenarioIndex:0,scenarios:s.scenario==='all'?['roster','dismissal','restructure']:[s.scenario],used:[],held:0,scenarioResults:[],feedback:null,startedAt:now,endedAt:null,reflection:'',requestIds:[]};
+ return {version:2,game,team:String(team).trim().slice(0,40)||'Team',settings:s,deck:game==='diagnostic'?makeDeck(data,s.count,s.seed):[],index:0,score:0,lifelines:2,hinted:false,disabled:[],phase:'question',log:[],streak:0,bestStreak:0,stage:s.startStage,scenarioIndex:0,scenarios:s.scenario==='all'?['roster','dismissal','restructure']:[s.scenario],used:[],held:0,scenarioResults:[],feedback:null,startedAt:now,updatedAt:now,endedAt:null,reflection:'',requestIds:[]};
 }
 function currentScenario(data,s){return data.SCENARIOS.find(x=>x.id===s.scenarios[s.scenarioIndex]);}
 function costFor(data,s){return data.TIERS[s.stage].cost+s.held*2;}
 function advance(data,old,action,now=Date.now()){
- const s=JSON.parse(JSON.stringify(old));
+ const s=JSON.parse(JSON.stringify(old));s.updatedAt=now;
  if(action.type==='reflection'){s.reflection=String(action.value||'').slice(0,1500);return s;}
  if(s.phase==='done')throw Error('This game is complete.');
  if(s.game==='diagnostic'){
@@ -1233,7 +1233,18 @@ const active=()=>ui.mode==='live'?ui.live?.team.state:practices[ui.game];
 const button=(action,label,cls='btn',extra='')=>`<button class="${cls}" data-action="${action}" ${extra}>${label}</button>`;
 const disabled=()=>ui.busy||!!ui.live?.pending&&ui.mode==='live'||ui.mode==='live'&&ui.live?.room.status!=='open';
 const no=(condition)=>condition?' disabled':'';
-function persist(){save('ldg-practice-v2',practices);if(ui.live){const i=connections.findIndex(c=>c.team.id===ui.live.team.id);if(i>=0)connections[i]=ui.live;else connections.push(ui.live);save('ldg-connections-v2',connections);}try{sessionStorage.setItem('ldg-pointer-v2',JSON.stringify({mode:ui.mode,game:ui.game,id:ui.live?.team.id}));}catch{}}
+function persist(){
+ const saved=load('ldg-practice-v2',{});
+ for(const [game,state] of Object.entries(practices)){const prior=saved[game];if(!prior||(state.updatedAt||state.startedAt)>=(prior.updatedAt||prior.startedAt))saved[game]=state;}
+ practices=saved;save('ldg-practice-v2',saved);
+ if(ui.live){
+  const latest=load('ldg-connections-v2',[]),i=latest.findIndex(c=>c.team.id===ui.live.team.id),prior=latest[i];
+  if(i<0)latest.push(ui.live);
+  else if(ui.live.team.revision>prior.team.revision||ui.live.team.revision===prior.team.revision&&(ui.live.pending||!prior.pending))latest[i]=ui.live;
+  connections=latest;save('ldg-connections-v2',latest);
+ }
+ try{sessionStorage.setItem('ldg-pointer-v2',JSON.stringify({mode:ui.mode,game:ui.game,id:ui.live?.team.id}));}catch{}
+}
 let toastTimeout, audio;
 function toast(msg){$('toast').textContent=msg;$('toast').classList.add('visible');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>$('toast').classList.remove('visible'),4200);}
 function tone(good){if(!ui.sound)return;try{audio??=new (window.AudioContext||window.webkitAudioContext)();audio.resume();const o=audio.createOscillator(),g=audio.createGain();o.connect(g);g.connect(audio.destination);o.type='sine';o.frequency.value=good?620:230;g.gain.setValueAtTime(.045,audio.currentTime);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+.18);o.start();o.stop(audio.currentTime+.19);}catch{}}
@@ -1352,7 +1363,7 @@ main.addEventListener('input',evt=>{
  const t=evt.target;if(t.id==='reason')ui.reason=t.value;
  if(t.id==='join-room')t.value=t.value.toUpperCase();
  if(t.id==='takeaway'){
-  const value=t.value,s=active();if(ui.mode==='practice'){s.reflection=value;persist();$('takeaway-status').textContent='Saved on this device.';}else{
+  const value=t.value,s=active();if(ui.mode==='practice'){s.reflection=value;s.updatedAt=Date.now();persist();$('takeaway-status').textContent='Saved on this device.';}else{
    $('takeaway-status').textContent='Saving…';clearTimeout(takeawayTimer);takeawayTimer=setTimeout(async()=>{if(ui.busy||ui.live?.pending){$('takeaway-status')&&($('takeaway-status').textContent='Your text is on this device. Reconnect to save it with the session.');ui.live.reflectionDraft=value;persist();return;}ui.live.reflectionDraft=value;persist();await move({type:'reflection',value});if(!ui.live.pending){delete ui.live.reflectionDraft;persist();}},1000);
   }
  }
