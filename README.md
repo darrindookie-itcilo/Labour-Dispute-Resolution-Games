@@ -4,29 +4,30 @@ Two team games adapted from the supplied Session 10 and Session 11 materials for
 
 ## Open the games
 
-Participant site: https://darrindookie-itcilo.github.io/Labour-Dispute-Resolution-Games/
+GitHub entry: https://darrindookie-itcilo.github.io/Labour-Dispute-Resolution-Games/
 
-## Use it in the room
+Live games: https://labour-dispute-games.darrin-dookie.chatgpt.site/games.html
 
-1. Give each team one device and open either game.
-2. Team name starts at **Team 1**; edit it if needed.
-3. Keep **workshop-2026** and the same settings on every device for comparable case order and scores.
-4. Teams discuss their choices, record a reason if useful, and compare scores out loud.
-5. At the end, select **Download our result** to keep the JSON report.
+The GitHub entry opens the live application. Teams and the protected facilitator board use the same origin as the API, with same-origin requests. Existing GitHub practice saves remain accessible at https://darrindookie-itcilo.github.io/Labour-Dispute-Resolution-Games/?practice=1#hub.
 
-Progress saves in the current browser. **Clear saved games** on the home page removes local practice progress and legacy team connections after confirmation; imported reports are kept. Resume shortcuts for names beginning with QA, Test or Deployment Check are hidden.
+Facilitator: open the site and select **Facilitator**. Use the facilitator credentials supplied for this training. Email and password are sent over HTTPS to the results service in Darrin Dookie’s ChatGPT Sites project at https://labour-dispute-games.darrin-dookie.chatgpt.site. The password is checked against a server-side hash; no password or password verifier is embedded in the published HTML.
 
-## Facilitator review
+## Run a live session
 
-Open **Facilitator review**. Import the teams’ downloaded JSON reports to compare scores, choices, reasons and takeaways on your device. Reports played on this device appear automatically. Export the collection as JSON or CSV, print it, or use Projector view. There is no sign-in and no upload to a results service.
+1. Sign in to Facilitator and create a session for the chosen game.
+2. Share the eight-character session code or copy the participant link.
+3. Each team joins on one device using a team alias. No participant account is required.
+4. Project the standings, pause or resume all teams, or add 30 seconds.
+5. Expand a team to see every choice and reason. Export the whole session as JSON or CSV.
+6. **Save attempt & restart** preserves the previous attempt before restarting a team. Closing a session preserves all results.
 
-## Offline use
+The board refreshes every four seconds. Scores are calculated by the results service. Failed transmissions retain the pending move on the team device and retry with an idempotent request identifier. A stale browser tab cannot overwrite newer team progress.
 
-Extract the download ZIP and open `index.html` directly. Both games work without internet; optional Google Fonts fall back to system fonts. Save or download results before switching browser or device.
+## Practice and offline use
 
-The published participant app is practice-only. The online session join form, facilitator login and claims of automatic board submission have been removed because the separate results-service connection could not be verified consistently. Opening an old session link leads to practice mode with an explanation. The application makes no results-service requests.
+Open `index.html` directly to play without a network connection. Google Fonts is optional; system fonts are used offline. Practice progress saves in the current browser. Team names start at **Team 1** and can be edited. **Clear saved games** on the home page removes local practice progress and saved live-team connections after confirmation; server records, imported reports and facilitator sign-in remain intact. Resume shortcuts for names beginning with QA, Test or Deployment Check are hidden. Download each result before switching devices. The facilitator can import downloaded practice JSON files for comparison on the facilitator device; imported files are not automatically uploaded.
 
-Earlier server source and protected records are retained for continuity; the current games do not depend on that service. No participant records, credentials or runtime secrets are included in this repository or ZIP.
+A live session and facilitator sign-in require internet access. Live games and the results service are hosted together at https://labour-dispute-games.darrin-dookie.chatgpt.site. The GitHub entry redirects there to avoid cross-origin API requests. The facilitator password is checked on the server. Each team must join a session code to appear live; earlier independent practice rounds can be downloaded and imported.
 
 ## The Diagnostic
 
@@ -42,7 +43,7 @@ The outcomes are teaching assumptions. A fair hearing, representation, consultat
 
 The standalone GitHub Pages file has all CSS, data and game logic embedded. `source/` contains editable front-end source, the shared rules, the server API and the database schema for review. Runtime secrets and participant records are excluded.
 
-The hosted checkout retains the Sites Vinext starter and earlier server implementation. Only the standalone client is used for the current activity. To rebuild the standalone file from that checkout:
+The full hosted service checkout uses the Sites Vinext starter, a D1 database and PBKDF2 password verification. To rebuild the standalone file from that checkout:
 
 ```sh
 node scripts/build-games.mjs /absolute/output/index.html
@@ -59,4 +60,4 @@ The GitHub Pages repository serves `index.html` from `main` at the root, with `.
 - Voluntary Conciliation and Arbitration Recommendation, 1951 (No. 92).
 - Integrated conflict management material in the supplied Session 11 deck and trainer script.
 
-The original working games were created with Claude. This edition retains their 18 cases, three scenarios, eleven cards and scoring structure, and adds saved progress, campaign play, local facilitator review, reports and content corrections. All cases are fictional. These learning adaptations are not an official ILO compliance assessment or legal advice. Principle definitions are paraphrased.
+The original working games were created with Claude. This edition retains their 18 cases, three scenarios, eleven cards and scoring structure, and adds shared team sessions, protected facilitation, saved progress, campaign play, reports and content corrections. All cases are fictional. These learning adaptations are not an official ILO compliance assessment or legal advice. Principle definitions are paraphrased.
