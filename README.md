@@ -6,7 +6,7 @@ Two team games adapted from the supplied Session 10 and Session 11 materials for
 
 Participant site: https://darrindookie-itcilo.github.io/Labour-Dispute-Resolution-Games/
 
-Facilitator: open the site and select **Facilitator**. Use the facilitator credentials supplied for this training. Credentials are verified on the server; no password or password verifier is embedded in the published HTML.
+Facilitator: open the site and select **Facilitator**. Use the facilitator credentials supplied for this training. Email and password are sent over HTTPS to the results service in Darrin Dookie’s ChatGPT Sites project at https://labour-dispute-games.darrin-dookie.chatgpt.site. The password is checked against a server-side hash; no password or password verifier is embedded in the published HTML.
 
 ## Run a live session
 
@@ -21,7 +21,7 @@ The board refreshes every four seconds. Scores are calculated by the results ser
 
 ## Practice and offline use
 
-Open `index.html` directly to play without a network connection. Google Fonts is optional; system fonts are used offline. Practice progress saves in the current browser. Download each result before switching devices. The facilitator can import downloaded practice JSON files for comparison on the facilitator device; imported files are not automatically uploaded.
+Open `index.html` directly to play without a network connection. Google Fonts is optional; system fonts are used offline. Practice progress saves in the current browser. Team names start at **Team 1** and can be edited. **Clear saved games** on the home page removes local practice progress and saved live-team connections after confirmation; server records, imported reports and facilitator sign-in remain intact. Resume shortcuts for names beginning with QA, Test or Deployment Check are hidden. Download each result before switching devices. The facilitator can import downloaded practice JSON files for comparison on the facilitator device; imported files are not automatically uploaded.
 
 A live session and facilitator sign-in require internet access. The secure service is hosted at https://labour-dispute-games.darrin-dookie.chatgpt.site and accepts the GitHub Pages origin. GitHub Pages itself runs only the static front end.
 

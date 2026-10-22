@@ -14,11 +14,13 @@ const password=randomBytes(16).toString('hex'),salt=randomBytes(16).toString('he
 let checks=0;
 async function req(path,{method='GET',body,token,origin='https://darrindookie-itcilo.github.io',ip='test'}={}){const r=await handle(new Request('https://test.invalid/api'+path,{method,headers:{Origin:origin,'CF-Connecting-IP':ip,...(body?{'Content-Type':'application/json'}:{}),...(token?{Authorization:'Bearer '+token}:{})},body:body?JSON.stringify(body):undefined}),env);let j={};if(r.status!==204)j=await r.json();return {status:r.status,json:j,headers:r.headers};}
 function eq(a,b,msg){assert.deepEqual(a,b,msg);checks++;}
+const preflight=await req('/join',{method:'OPTIONS'});eq(preflight.status,204,'GitHub Pages preflight accepted');eq(preflight.headers.get('Access-Control-Allow-Origin'),'https://darrindookie-itcilo.github.io','GitHub origin explicitly allowed');eq(preflight.headers.get('Access-Control-Allow-Headers'),'Content-Type, Authorization','JSON and bearer headers allowed');
+const unauthorized=await req('/rooms');eq(unauthorized.headers.get('Access-Control-Allow-Origin'),'https://darrindookie-itcilo.github.io','Authentication errors retain CORS headers');
 eq((await req('/rooms')).status,401,'Anonymous cannot list sessions');eq((await req('/room/ABCDEFGH')).status,401,'Anonymous cannot read responses');eq((await req('/rooms',{origin:'https://other.invalid'})).status,403,'CORS origin restricted');
 eq((await req('/login',{method:'POST',body:{email:'test@example.com',password:'wrong'}})).status,401,'Bad password rejected');
 const login=await req('/login',{method:'POST',body:{email:'test@example.com',password}});eq(login.status,200,'Correct password accepted');const token=login.json.token;eq((await req('/me',{token})).status,200,'Session verifies');
 const created=await req('/rooms',{method:'POST',token,body:{game:'diagnostic',name:'Integration test',settings:{count:8,seed:'test',minutes:15}}});eq(created.status,201,'Session created');const code=created.json.room.code;
-const joined=await req('/join',{method:'POST',body:{code,name:'Team A'}});eq(joined.status,201,'Team joins without login');const tt=joined.json.token;let team=joined.json.team;
+const joined=await req('/join',{method:'POST',body:{code,name:'Team A'}});eq(joined.status,201,'Team joins without login');eq(joined.headers.get('Access-Control-Allow-Origin'),'https://darrindookie-itcilo.github.io','Join response permits GitHub Pages');const tt=joined.json.token;let team=joined.json.team;
 eq((await req('/join',{method:'POST',body:{code,name:'Team A'}})).status,409,'Duplicate team rejected');
 let action={revision:team.revision,requestId:crypto.randomUUID(),action:{type:'answer',choice:'efficiency',reason:'Test reason'}};
 const answer=await req('/team/action',{method:'POST',token:tt,body:action});eq(answer.status,200,'Move accepted');team=answer.json.team;eq(team.state.log.length,1,'Choice recorded');
