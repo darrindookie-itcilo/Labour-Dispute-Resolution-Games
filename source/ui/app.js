@@ -16,6 +16,8 @@ let practices=load('ldg-practice-v2',{}), connections=load('ldg-connections-v2',
 let adminToken='';try{adminToken=sessionStorage.getItem('ldg-admin-v2')||'';}catch{}
 let ui={mode:'practice',game:'diagnostic',live:null,selected:'',reason:'',confidence:'sure',busy:false,error:'',offline:false,boardError:'',board:null,rooms:[],roomCode:'',projector:false,setupCount:13,adminGame:'diagnostic',standings:null,sound:false,create:{name:'22 October · Session 10',game:'diagnostic',count:13,scenario:'all',startStage:0,minutes:15},openDetails:new Set()};
 try{const p=JSON.parse(sessionStorage.getItem('ldg-pointer-v2'));if(p){ui.mode=p.mode;ui.game=p.game;ui.live=connections.find(c=>c.team.id===p.id)||null;}ui.roomCode=sessionStorage.getItem('ldg-room-v2')||'';}catch{}
+const requestedRoom=new URLSearchParams(location.search).get('room')||'';
+if(location.hash==='#facilitator'&&/^[A-Z2-9]{8}$/.test(requestedRoom))ui.roomCode=requestedRoom;
 if(!HOSTED){ui.mode='practice';ui.live=null;adminToken='';}
 const fmt=seconds=>{seconds=Math.max(0,Math.floor(seconds||0));return String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');};
 const testTeamName=name=>/^(?:qa(?:[\s_-]|\d|$)|test(?:[\s_-]|\d|$)|deployment[\s_-]+check(?:[\s_-]|\d|$))/i.test(String(name||'').trim());
